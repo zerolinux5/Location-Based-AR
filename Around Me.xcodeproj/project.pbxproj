@@ -24,6 +24,11 @@
 		EAF971A11978234000666EC2 /* PlacesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971A01978234000666EC2 /* PlacesLoader.m */; };
 		EAF971A41978254D00666EC2 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971A31978254D00666EC2 /* Place.m */; };
 		EAF971A7197825D800666EC2 /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971A6197825D800666EC2 /* PlaceAnnotation.m */; };
+		EAF971B51978288A00666EC2 /* ARCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971AA1978288A00666EC2 /* ARCoordinate.m */; };
+		EAF971B61978288A00666EC2 /* ARGeoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971AC1978288A00666EC2 /* ARGeoCoordinate.m */; };
+		EAF971B71978288A00666EC2 /* ARKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971AE1978288A00666EC2 /* ARKit.m */; };
+		EAF971B81978288A00666EC2 /* AugmentedRealityController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971B21978288A00666EC2 /* AugmentedRealityController.m */; };
+		EAF971B91978288A00666EC2 /* GEOLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971B41978288A00666EC2 /* GEOLocations.m */; };
 		F419E9BA16BA4C9600D54342 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419E9B916BA4C9600D54342 /* MapKit.framework */; };
 		F419E9BC16BA4CCB00D54342 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419E9BB16BA4CCB00D54342 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +60,18 @@
 		EAF971A31978254D00666EC2 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 		EAF971A5197825D800666EC2 /* PlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceAnnotation.h; sourceTree = "<group>"; };
 		EAF971A6197825D800666EC2 /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceAnnotation.m; sourceTree = "<group>"; };
+		EAF971A91978288A00666EC2 /* ARCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCoordinate.h; sourceTree = "<group>"; };
+		EAF971AA1978288A00666EC2 /* ARCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCoordinate.m; sourceTree = "<group>"; };
+		EAF971AB1978288A00666EC2 /* ARGeoCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGeoCoordinate.h; sourceTree = "<group>"; };
+		EAF971AC1978288A00666EC2 /* ARGeoCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGeoCoordinate.m; sourceTree = "<group>"; };
+		EAF971AD1978288A00666EC2 /* ARKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARKit.h; sourceTree = "<group>"; };
+		EAF971AE1978288A00666EC2 /* ARKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARKit.m; sourceTree = "<group>"; };
+		EAF971AF1978288A00666EC2 /* ARLocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLocationDelegate.h; sourceTree = "<group>"; };
+		EAF971B01978288A00666EC2 /* ARViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewProtocol.h; sourceTree = "<group>"; };
+		EAF971B11978288A00666EC2 /* AugmentedRealityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AugmentedRealityController.h; sourceTree = "<group>"; };
+		EAF971B21978288A00666EC2 /* AugmentedRealityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AugmentedRealityController.m; sourceTree = "<group>"; };
+		EAF971B31978288A00666EC2 /* GEOLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEOLocations.h; sourceTree = "<group>"; };
+		EAF971B41978288A00666EC2 /* GEOLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEOLocations.m; sourceTree = "<group>"; };
 		F419E9B916BA4C9600D54342 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F419E9BB16BA4CCB00D54342 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -111,6 +128,7 @@
 		8FB68A4816B9ACCA00979E63 /* Around Me */ = {
 			isa = PBXGroup;
 			children = (
+				EAF971A81978288A00666EC2 /* ARKit */,
 				8FB68A5116B9ACCA00979E63 /* AppDelegate.h */,
 				8FB68A5216B9ACCA00979E63 /* AppDelegate.m */,
 				8FB68A5A16B9ACCA00979E63 /* MainStoryboard.storyboard */,
@@ -141,6 +159,25 @@
 				8FB68A5816B9ACCA00979E63 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAF971A81978288A00666EC2 /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				EAF971A91978288A00666EC2 /* ARCoordinate.h */,
+				EAF971AA1978288A00666EC2 /* ARCoordinate.m */,
+				EAF971AB1978288A00666EC2 /* ARGeoCoordinate.h */,
+				EAF971AC1978288A00666EC2 /* ARGeoCoordinate.m */,
+				EAF971AD1978288A00666EC2 /* ARKit.h */,
+				EAF971AE1978288A00666EC2 /* ARKit.m */,
+				EAF971AF1978288A00666EC2 /* ARLocationDelegate.h */,
+				EAF971B01978288A00666EC2 /* ARViewProtocol.h */,
+				EAF971B11978288A00666EC2 /* AugmentedRealityController.h */,
+				EAF971B21978288A00666EC2 /* AugmentedRealityController.m */,
+				EAF971B31978288A00666EC2 /* GEOLocations.h */,
+				EAF971B41978288A00666EC2 /* GEOLocations.m */,
+			);
+			path = ARKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,10 +246,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF971B91978288A00666EC2 /* GEOLocations.m in Sources */,
 				8FB68A4F16B9ACCA00979E63 /* main.m in Sources */,
+				EAF971B71978288A00666EC2 /* ARKit.m in Sources */,
 				8FB68A5316B9ACCA00979E63 /* AppDelegate.m in Sources */,
 				8FB68A5F16B9ACCA00979E63 /* MainViewController.m in Sources */,
+				EAF971B61978288A00666EC2 /* ARGeoCoordinate.m in Sources */,
+				EAF971B81978288A00666EC2 /* AugmentedRealityController.m in Sources */,
 				EAF971A41978254D00666EC2 /* Place.m in Sources */,
+				EAF971B51978288A00666EC2 /* ARCoordinate.m in Sources */,
 				8FB68A6216B9ACCA00979E63 /* FlipsideViewController.m in Sources */,
 				EAF971A7197825D800666EC2 /* PlaceAnnotation.m in Sources */,
 				EAF971A11978234000666EC2 /* PlacesLoader.m in Sources */,

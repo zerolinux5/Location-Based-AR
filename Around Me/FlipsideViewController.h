@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "ARKit.h"
 
 @class FlipsideViewController;
 
@@ -14,9 +16,12 @@
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
 @end
 
-@interface FlipsideViewController : UIViewController
+@interface FlipsideViewController : UIViewController <ARLocationDelegate, ARDelegate, ARMarkerDelegate>
 
 @property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+
+@property (nonatomic, strong) NSArray *locations;
+@property (nonatomic, strong) MKUserLocation *userLocation;
 
 - (IBAction)done:(id)sender;
 
