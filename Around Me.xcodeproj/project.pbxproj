@@ -22,6 +22,8 @@
 		8FE6410E176F98350082B2F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE6410D176F98350082B2F0 /* QuartzCore.framework */; };
 		8FE64110176F98410082B2F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE6410F176F98410082B2F0 /* AVFoundation.framework */; };
 		EAF971A11978234000666EC2 /* PlacesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971A01978234000666EC2 /* PlacesLoader.m */; };
+		EAF971A41978254D00666EC2 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971A31978254D00666EC2 /* Place.m */; };
+		EAF971A7197825D800666EC2 /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971A6197825D800666EC2 /* PlaceAnnotation.m */; };
 		F419E9BA16BA4C9600D54342 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419E9B916BA4C9600D54342 /* MapKit.framework */; };
 		F419E9BC16BA4CCB00D54342 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419E9BB16BA4CCB00D54342 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,10 @@
 		8FE6410F176F98410082B2F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EAF9719F1978234000666EC2 /* PlacesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesLoader.h; sourceTree = "<group>"; };
 		EAF971A01978234000666EC2 /* PlacesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesLoader.m; sourceTree = "<group>"; };
+		EAF971A21978254D00666EC2 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		EAF971A31978254D00666EC2 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		EAF971A5197825D800666EC2 /* PlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceAnnotation.h; sourceTree = "<group>"; };
+		EAF971A6197825D800666EC2 /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceAnnotation.m; sourceTree = "<group>"; };
 		F419E9B916BA4C9600D54342 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F419E9BB16BA4CCB00D54342 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -115,6 +121,10 @@
 				8FB68A4916B9ACCA00979E63 /* Supporting Files */,
 				EAF9719F1978234000666EC2 /* PlacesLoader.h */,
 				EAF971A01978234000666EC2 /* PlacesLoader.m */,
+				EAF971A21978254D00666EC2 /* Place.h */,
+				EAF971A31978254D00666EC2 /* Place.m */,
+				EAF971A5197825D800666EC2 /* PlaceAnnotation.h */,
+				EAF971A6197825D800666EC2 /* PlaceAnnotation.m */,
 			);
 			path = "Around Me";
 			sourceTree = "<group>";
@@ -202,7 +212,9 @@
 				8FB68A4F16B9ACCA00979E63 /* main.m in Sources */,
 				8FB68A5316B9ACCA00979E63 /* AppDelegate.m in Sources */,
 				8FB68A5F16B9ACCA00979E63 /* MainViewController.m in Sources */,
+				EAF971A41978254D00666EC2 /* Place.m in Sources */,
 				8FB68A6216B9ACCA00979E63 /* FlipsideViewController.m in Sources */,
+				EAF971A7197825D800666EC2 /* PlaceAnnotation.m in Sources */,
 				EAF971A11978234000666EC2 /* PlacesLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
