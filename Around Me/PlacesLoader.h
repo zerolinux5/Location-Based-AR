@@ -10,6 +10,7 @@
 
 //1
 @class CLLocation;
+@class Place;
 
 //2
 typedef void (^SuccessHandler)(NSDictionary *responseDict);
@@ -22,5 +23,7 @@ typedef void (^ErrorHandler)(NSError *error);
 
 //4
 - (void)loadPOIsForLocation:(CLLocation *)location radius:(int)radius successHandler:(SuccessHandler)handler errorHandler:(ErrorHandler)errorHandler;
+
+- (void)loadDetailInformation:(Place *)location successHanlder:(SuccessHandler)handler errorHandler:(ErrorHandler)errorHandler;
 
 @end

@@ -9,8 +9,14 @@
 #import "FlipsideViewController.h"
 #import "Place.h"
 #import "MarkerView.h"
+#import "PlacesLoader.h"
 
-@interface FlipsideViewController ()
+NSString * const kPhoneKey = @"formatted_phone_number";
+NSString * const kWebsiteKey = @"website";
+
+const int kInfoViewTag = 1001;
+
+@interface FlipsideViewController () <MarkerViewDelegate>
 
 @property (nonatomic, strong) AugmentedRealityController *arController;
 @property (nonatomic, strong) NSMutableArray *geoLocations;
@@ -91,6 +97,53 @@
 
 -(void)didUpdateOrientation:(UIDeviceOrientation)orientation {
     
+}
+
+- (void)didTouchMarkerView:(MarkerView *)markerView {
+	//1
+	ARGeoCoordinate *tappedCoordinate = [markerView coordinate];
+	CLLocation *location = [tappedCoordinate geoLocation];
+    
+	//2
+	int index = [_locations indexOfObjectPassingTest:^(id obj, NSUInteger index, BOOL *stop) {
+		return [[(Place *)obj location] isEqual:location];
+	}];
+    
+	//3
+	if(index != NSNotFound) {
+		//4
+		Place *tappedPlace = [_locations objectAtIndex:index];
+		[[PlacesLoader sharedInstance] loadDetailInformation:tappedPlace successHanlder:^(NSDictionary *response) {
+			//5
+			NSLog(@"Response: %@", response);
+			NSDictionary *resultDict = [response objectForKey:@"result"];
+			[tappedPlace setPhoneNumber:[resultDict objectForKey:kPhoneKey]];
+			[tappedPlace setWebsite:[resultDict objectForKey:kWebsiteKey]];
+			[self showInfoViewForPlace:tappedPlace];
+		} errorHandler:^(NSError *error) {
+			NSLog(@"Error: %@", error);
+		}];
+	}
+}
+
+- (void)showInfoViewForPlace:(Place *)place {
+	CGRect frame = [[self view] frame];
+	UITextView *infoView = [[UITextView alloc] initWithFrame:CGRectMake(50.0f, 50.0f, frame.size.width - 100.0f, frame.size.height - 100.0f)];
+	[infoView setCenter:[[self view] center]];
+	[infoView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    
+	//1
+	[infoView setText:[place infoText]];
+	[infoView setTag:kInfoViewTag];
+	[infoView setEditable:NO];
+    
+	[[self view] addSubview:infoView];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	UIView *infoView = [[self view] viewWithTag:kInfoViewTag];
+    
+	[infoView removeFromSuperview];
 }
 
 @end

@@ -20,4 +20,8 @@
 	return self;
 }
 
+- (NSString *)infoText {
+	return [NSString stringWithFormat:@"Name:%@\nAddress:%@\nPhone:%@\nWeb:%@", _placeName, _address, _phoneNumber, _website];
+}
+
 @end

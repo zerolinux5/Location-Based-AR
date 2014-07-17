@@ -70,6 +70,18 @@ const float kHeight = 100.0f;
 	[[self lblDistance] setText:[NSString stringWithFormat:@"%.2f km", [[self coordinate] distanceFromOrigin] / 1000.0f]];
 }
 
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	if(_delegate && [_delegate conformsToProtocol:@protocol(MarkerViewDelegate)]) {
+		[_delegate didTouchMarkerView:self];
+	}
+}
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+	CGRect theFrame = CGRectMake(0, 0, kWidth, kHeight);
+    
+	return CGRectContainsPoint(theFrame, point);
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
