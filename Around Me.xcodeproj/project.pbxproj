@@ -21,6 +21,7 @@
 		8FB68A6216B9ACCA00979E63 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB68A6116B9ACCA00979E63 /* FlipsideViewController.m */; };
 		8FE6410E176F98350082B2F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE6410D176F98350082B2F0 /* QuartzCore.framework */; };
 		8FE64110176F98410082B2F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE6410F176F98410082B2F0 /* AVFoundation.framework */; };
+		EAF971A11978234000666EC2 /* PlacesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF971A01978234000666EC2 /* PlacesLoader.m */; };
 		F419E9BA16BA4C9600D54342 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419E9B916BA4C9600D54342 /* MapKit.framework */; };
 		F419E9BC16BA4CCB00D54342 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F419E9BB16BA4CCB00D54342 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,8 @@
 		8FB68A6116B9ACCA00979E63 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		8FE6410D176F98350082B2F0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8FE6410F176F98410082B2F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EAF9719F1978234000666EC2 /* PlacesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesLoader.h; sourceTree = "<group>"; };
+		EAF971A01978234000666EC2 /* PlacesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesLoader.m; sourceTree = "<group>"; };
 		F419E9B916BA4C9600D54342 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F419E9BB16BA4CCB00D54342 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -110,6 +113,8 @@
 				8FB68A6016B9ACCA00979E63 /* FlipsideViewController.h */,
 				8FB68A6116B9ACCA00979E63 /* FlipsideViewController.m */,
 				8FB68A4916B9ACCA00979E63 /* Supporting Files */,
+				EAF9719F1978234000666EC2 /* PlacesLoader.h */,
+				EAF971A01978234000666EC2 /* PlacesLoader.m */,
 			);
 			path = "Around Me";
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				8FB68A5316B9ACCA00979E63 /* AppDelegate.m in Sources */,
 				8FB68A5F16B9ACCA00979E63 /* MainViewController.m in Sources */,
 				8FB68A6216B9ACCA00979E63 /* FlipsideViewController.m in Sources */,
+				EAF971A11978234000666EC2 /* PlacesLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

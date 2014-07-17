@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "PlacesLoader.h"
 
 @interface MainViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
@@ -64,7 +65,13 @@
         
 		[_mapView setRegion:region animated:YES];
         
-		// More code here
+        [[PlacesLoader sharedInstance] loadPOIsForLocation:[locations lastObject] radius:1000 successHandler:^(NSDictionary *response) {
+            NSLog(@"Response: %@", response);
+            //more code here
+            
+        } errorHandler:^(NSError *error) {
+            NSLog(@"Error: %@", error);
+        }];
         
 		[manager stopUpdatingLocation];
 	}
