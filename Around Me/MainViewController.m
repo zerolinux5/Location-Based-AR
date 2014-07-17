@@ -8,19 +8,24 @@
 
 #import "MainViewController.h"
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MainViewController ()
+@interface MainViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
 @implementation MainViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+	[super viewDidLoad];
+    
+	[self setLocationManager:[[CLLocationManager alloc] init]];
+	[_locationManager setDelegate:self];
+	[_locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+	[_locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +46,28 @@
     if ([[segue identifier] isEqualToString:@"showAlternate"]) {
         [[segue destinationViewController] setDelegate:self];
     }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+	//1
+	CLLocation *lastLocation = [locations lastObject];
+    
+	//2
+	CLLocationAccuracy accuracy = [lastLocation horizontalAccuracy];
+	NSLog(@"Received location %@ with accuracy %f", lastLocation, accuracy);
+    
+	//3
+	if(accuracy < 100.0) {
+		//4
+		MKCoordinateSpan span = MKCoordinateSpanMake(0.14, 0.14);
+		MKCoordinateRegion region = MKCoordinateRegionMake([lastLocation coordinate], span);
+        
+		[_mapView setRegion:region animated:YES];
+        
+		// More code here
+        
+		[manager stopUpdatingLocation];
+	}
 }
 
 @end
