@@ -7,6 +7,8 @@
 //
 
 #import "FlipsideViewController.h"
+#import "Place.h"
+#import "MarkerView.h"
 
 @interface FlipsideViewController ()
 
@@ -31,6 +33,11 @@
     [_arController setDebugMode:NO];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self geoLocations];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -39,11 +46,34 @@
 
 #pragma mark - Actions
 
+- (void)generateGeoLocations {
+	//1
+	[self setGeoLocations:[NSMutableArray arrayWithCapacity:[_locations count]]];
+    
+	//2
+	for(Place *place in _locations) {
+		//3
+		ARGeoCoordinate *coordinate = [ARGeoCoordinate coordinateWithLocation:[place location] locationTitle:[place placeName]];
+		//4
+		[coordinate calibrateUsingOrigin:[_userLocation location]];
+        
+		MarkerView *markerView = [[MarkerView alloc] initWithCoordinate:coordinate delegate:self];
+        [coordinate setDisplayView:markerView];
+        
+		//5
+		[_arController addCoordinate:coordinate];
+		[_geoLocations addObject:coordinate];
+	}
+}
+
 - (void)didTapMarker:(ARGeoCoordinate *)coordinate {
 }
 
 - (NSMutableArray *)geoLocations {
-    return nil;
+	if(!_geoLocations) {
+		[self generateGeoLocations];
+	}
+	return _geoLocations;
 }
 
 - (IBAction)done:(id)sender
