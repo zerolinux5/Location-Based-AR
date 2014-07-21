@@ -15,7 +15,7 @@
 
 //2
 NSString * const apiURL = @"https://maps.googleapis.com/maps/api/place/";
-NSString * const apiKey = @"AIzaSyDTA6aYXO2hCW3WQ7d6f4k9c93kF0agO_4";
+NSString * const apiKey = @"key";
 
 //3
 @interface PlacesLoader ()

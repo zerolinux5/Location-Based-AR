@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>470AA0CA-51D2-4CFF-B8F9-D8DAB410206C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Around Me</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C62D566B-201F-4E60-929F-1A28B27B9033</key>
+		<string>ssh://github.com/zerolinux5/Location-Based-AR.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Around Me.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C62D566B-201F-4E60-929F-1A28B27B9033</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/zerolinux5/Location-Based-AR.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C62D566B-201F-4E60-929F-1A28B27B9033</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C62D566B-201F-4E60-929F-1A28B27B9033</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Around Me Starter Project</string>
+		</dict>
+	</array>
+</dict>
+</plist>
